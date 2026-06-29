@@ -1,0 +1,218 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\AI\\SingleSignOn\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\services\\apploginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:services\\apploginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\controllers\\ssocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:controllers\\ssocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\services\\permissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:services\\permissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\views\\permissions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:views\\permissions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\controllers\\permissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:controllers\\permissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\services\\credentialstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:services\\credentialstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\AI\\SingleSignOn\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\AI\\SingleSignOn\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAB4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-22T10:53:51.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\AI\\SingleSignOn\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\AI\\SingleSignOn\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAEMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-22T10:52:24.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\AI\\SingleSignOn\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "D:\\AI\\SingleSignOn\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwD0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T06:44:28.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PermissionsController.cs",
+              "DocumentMoniker": "D:\\AI\\SingleSignOn\\Controllers\\PermissionsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PermissionsController.cs",
+              "ToolTip": "D:\\AI\\SingleSignOn\\Controllers\\PermissionsController.cs",
+              "RelativeToolTip": "Controllers\\PermissionsController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-23T08:48:00.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppLoginService.cs",
+              "DocumentMoniker": "D:\\AI\\SingleSignOn\\Services\\AppLoginService.cs",
+              "RelativeDocumentMoniker": "Services\\AppLoginService.cs",
+              "ToolTip": "D:\\AI\\SingleSignOn\\Services\\AppLoginService.cs",
+              "RelativeToolTip": "Services\\AppLoginService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAArwB8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T11:04:39.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PermissionRepository.cs",
+              "DocumentMoniker": "D:\\AI\\SingleSignOn\\Services\\PermissionRepository.cs",
+              "RelativeDocumentMoniker": "Services\\PermissionRepository.cs",
+              "ToolTip": "D:\\AI\\SingleSignOn\\Services\\PermissionRepository.cs",
+              "RelativeToolTip": "Services\\PermissionRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAUwBIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T07:13:19.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\AI\\SingleSignOn\\Views\\Permissions\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Permissions\\Index.cshtml",
+              "ToolTip": "D:\\AI\\SingleSignOn\\Views\\Permissions\\Index.cshtml",
+              "RelativeToolTip": "Views\\Permissions\\Index.cshtml",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAkwMoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-24T03:09:37.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CredentialStore.cs",
+              "DocumentMoniker": "D:\\AI\\SingleSignOn\\Services\\CredentialStore.cs",
+              "RelativeDocumentMoniker": "Services\\CredentialStore.cs",
+              "ToolTip": "D:\\AI\\SingleSignOn\\Services\\CredentialStore.cs",
+              "RelativeToolTip": "Services\\CredentialStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwCQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-23T02:10:56.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SsoController.cs",
+              "DocumentMoniker": "D:\\AI\\SingleSignOn\\Controllers\\SsoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SsoController.cs",
+              "ToolTip": "D:\\AI\\SingleSignOn\\Controllers\\SsoController.cs",
+              "RelativeToolTip": "Controllers\\SsoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T06:44:24.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\AI\\SingleSignOn\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\AI\\SingleSignOn\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAABkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-22T10:58:27.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\AI\\SingleSignOn\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\AI\\SingleSignOn\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-22T11:02:19.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\AI\\SingleSignOn\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\AI\\SingleSignOn\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T06:44:26.102Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

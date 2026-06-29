@@ -1,0 +1,12 @@
+@{ ViewData["Title"] = "ตั้งรหัสผ่านสำเร็จ"; }
+@await Html.PartialAsync("_AuthStyles")
+
+<div class="auth-wrap">
+    <div class="auth-card">
+        <div class="big-ico ok">✓</div>
+        <h1>ตั้งรหัสผ่านใหม่สำเร็จ</h1>
+        <p class="sub">รหัสผ่านของคุณถูกเปลี่ยนเรียบร้อยแล้ว<br>เข้าสู่ระบบด้วยรหัสผ่านใหม่ได้ทันที</p>
+        <a class="btn-login" style="display:block;text-align:center;text-decoration:none;"
+           asp-controller="Account" asp-action="Login">เข้าสู่ระบบ</a>
+    </div>
+</div>

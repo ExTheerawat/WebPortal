@@ -1,0 +1,38 @@
+<!-- ============================================================
+     ปุ่ม "Portal" (กลับไป Web Portal) — โทนทองหรู (luxury gold)
+     [ ← ย้อนกลับ ] + [ โลโก้ CCPBG ] + Portal
+     วางใน navbar ของระบบปลายทาง (Internal / Leave / KPI / Helpdesk)
+     - ลิงก์ไป SSO: https://sso.penso.co.th/  (login ไม่หลุด — คุกกี้อยู่บนโดเมน sso)
+     - ชิดขวา (margin-left:auto) + เว้นขอบ (margin-right:16px)
+     ============================================================ -->
+
+<a href="https://sso.penso.co.th/"
+   style="margin-left:auto;margin-right:16px;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px 0 11px;
+          background:linear-gradient(135deg,#f7e7a8 0%,#e2c25c 38%,#caa12f 68%,#a9781a 100%);
+          color:#3a2c00;font-size:14px;font-weight:700;line-height:1;border-radius:12px;
+          text-decoration:none;white-space:nowrap;font-family:'Segoe UI',Tahoma,sans-serif;
+          border:1px solid rgba(150,108,15,0.55);
+          box-shadow:0 4px 14px rgba(184,134,11,0.38), inset 0 1px 0 rgba(255,255,255,0.55);
+          transition:all .15s ease;"
+   onmouseover="this.style.boxShadow='0 7px 22px rgba(184,134,11,0.55), inset 0 1px 0 rgba(255,255,255,0.65)';this.style.transform='translateY(-1px)';"
+   onmouseout="this.style.boxShadow='0 4px 14px rgba(184,134,11,0.38), inset 0 1px 0 rgba(255,255,255,0.55)';this.style.transform='none';"
+   title="กลับไปหน้ารวมระบบ Web Portal">
+    <!-- ไอคอนย้อนกลับ -->
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3a2c00" stroke-width="2.6"
+         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    <!-- โลโก้ CCPBG -->
+    <img src="https://sso.penso.co.th/img/CCPBG.jpg" alt="CCPBG"
+         onerror="this.onerror=null;this.src='https://sso.penso.co.th/img/ccpbg-logo.png';"
+         style="height:24px;width:auto;display:block;border-radius:5px;background:#fff;padding:1px 3px;box-shadow:0 1px 2px rgba(0,0,0,.18);" />
+    Portal
+</a>
+
+<!--
+  📌 หมายเหตุ
+   • ไม่ชิดขวา  → เปลี่ยน margin-left:auto เป็น float:right
+   • อยากห่างขอบมาก/น้อย → ปรับ margin-right (เช่น 24px / 8px)
+   • อยากตัวอักษรขาว → เปลี่ยน color:#3a2c00 เป็น #fff และ stroke ของ svg เป็น #fff
+-->

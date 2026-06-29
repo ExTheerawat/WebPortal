@@ -1,0 +1,38 @@
+@model SingleSignOn.Models.AutoLoginPrep
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>กำลังเข้าสู่ @Model.AppName…</title>
+    <link rel="icon" href="/img/ccpbg-logo.svg" type="image/svg+xml">
+    <style>
+        body { margin:0; height:100vh; display:flex; align-items:center; justify-content:center;
+            font-family:"Segoe UI",Tahoma,sans-serif; background:#eef2f6; color:#1f2937; }
+        .box { text-align:center; }
+        .box img { height:54px; width:auto; margin-bottom:22px; }
+        .spinner { width:42px; height:42px; border:4px solid #e5e7eb; border-top-color:#e11b22;
+            border-radius:50%; margin:0 auto 16px; animation:spin .8s linear infinite; }
+        @@keyframes spin { to { transform: rotate(360deg); } }
+        p { color:#6b7280; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="/img/ccpbg-logo.png" onerror="this.onerror=null;this.src='/img/ccpbg-logo.svg'" alt="CCPBG">
+        <div class="spinner"></div>
+        <p>กำลังเข้าสู่ระบบ <strong>@Model.AppName</strong>…</p>
+    </div>
+
+    <form id="ssoForm" method="post" action="@Model.PostUrl">
+        @foreach (var kv in Model.Fields)
+        {
+            <input type="hidden" name="@kv.Key" value="@kv.Value" />
+        }
+    </form>
+    <script>document.getElementById('ssoForm').submit();</script>
+</body>
+</html>

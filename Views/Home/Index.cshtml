@@ -1,0 +1,46 @@
+@model List<SingleSignOn.Models.AppDefinition>
+@{
+    // ViewData["Title"] = "เลือกระบบ";
+}
+
+<style>
+    .hub-head { margin-bottom:26px; }
+    .hub-head h1 { margin:0 0 6px; font-size:1.6rem; }
+    .hub-head p { margin:0; color:var(--muted); }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; }
+    .tile { position:relative; display:block; background:var(--card); border:1px solid var(--border);
+        border-top:4px solid var(--c, var(--gold)); border-radius:16px; padding:22px 22px 24px; box-shadow:0 2px 8px #0f172a12;
+        transition: transform .12s, border-color .12s, box-shadow .12s; }
+    .tile:hover { transform: translateY(-4px); border-color: var(--c, var(--accent)); box-shadow: 0 16px 34px #0f172a24; }
+    .tile .icon { font-size:2rem; width:58px; height:58px; display:flex; align-items:center; justify-content:center;
+        border-radius:14px; margin-bottom:16px; }
+    .tile h3 { margin:0 0 4px; color:var(--text); font-size:1.2rem; }
+    .tile p { margin:0 0 14px; color:var(--muted); font-size:.86rem; min-height:2.4em; }
+    .tile .enter { font-size:.85rem; font-weight:700; color:var(--c, var(--accent)); display:flex; align-items:center; gap:6px; }
+    .tile .host { position:absolute; top:18px; right:18px; font-size:.7rem; color:#9ca3af; }
+</style>
+
+<div class="hub-head">
+</div>
+
+@if (!Model.Any())
+{
+    <div style="max-width:460px;margin:6vh auto;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:34px;box-shadow:0 10px 30px #0f172a12;">
+        <div style="font-size:2.6rem;">🔒</div>
+        <h2 style="margin:10px 0 8px;">ยังไม่มีสิทธิ์เข้าใช้ระบบ</h2>
+        <p style="color:var(--muted);">บัญชีของคุณยังไม่ถูกกำหนดสิทธิ์ใช้งานระบบใด — กรุณาติดต่อผู้ดูแลระบบ</p>
+    </div>
+}
+
+<div class="grid">
+    @foreach (var app in Model)
+    {
+        <a class="tile" href="/go/@app.Key" style="--c:@app.Color">
+            <span class="host">@(new Uri(app.Url).Host)</span>
+            <div class="icon" style="background:@(app.Color)1a; border:1px solid @(app.Color)55;">@app.Icon</div>
+            <h3>@app.Name</h3>
+            <p>@app.Description</p>
+            <span class="enter">เข้าระบบ →</span>
+        </a>
+    }
+</div>

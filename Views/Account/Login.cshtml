@@ -1,0 +1,96 @@
+@model SingleSignOn.Models.LoginViewModel
+@{
+    ViewData["Title"] = "เข้าสู่ระบบ";
+}
+
+<style>
+    .login-wrap { max-width: 410px; margin: 5vh auto 0; }
+    .login-card { background: var(--card); border:1px solid var(--border); border-radius:18px;
+        padding:34px 32px; box-shadow: 0 20px 50px #0f172a1a; }
+    .login-card .logo-wrap { text-align:center; margin-bottom:22px; }
+    .login-card .logo-wrap img { height:64px; width:auto; max-width:100%; }
+    .login-card h1 { margin:0 0 4px; font-size:1.4rem; text-align:center; }
+    .login-card p.sub { margin:0 0 24px; color:var(--muted); font-size:.9rem; text-align:center; }
+    .field { margin-bottom:16px; }
+    .field label { display:block; font-size:.82rem; color:var(--muted); margin-bottom:6px; }
+    .field input { width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--border);
+        background:#fff; color:var(--text); font-size:1rem; }
+    .field input:focus { outline:none; border-color:var(--gold); box-shadow:0 0 0 3px #caa12f33; }
+    .pwd-wrap { position:relative; }
+    .pwd-wrap input { padding-right:44px; }
+    .pwd-eye { position:absolute; right:6px; top:50%; transform:translateY(-50%); background:none; border:0; cursor:pointer; color:var(--muted); padding:6px; display:flex; align-items:center; }
+    .pwd-eye:hover { color:var(--accent); }
+    .remember-row { margin:2px 0 18px; }
+    .remember-lbl { display:flex; align-items:center; gap:9px; cursor:pointer; margin:0; }
+    .remember-lbl input { width:17px; height:17px; accent-color:var(--accent); cursor:pointer; margin:0; flex:0 0 auto; }
+    .remember-lbl span { font-size:.82rem; color:var(--muted); user-select:none; line-height:1.35; }
+    .btn-login { width:100%; padding:13px; border:1px solid #b8901f; border-radius:10px; cursor:pointer;
+        background: linear-gradient(135deg,#f3dd86 0%,#caa12f 55%,#a9781a 100%); color:#1a1205; font-size:1rem; font-weight:800; margin-top:6px; letter-spacing:.3px; }
+    .btn-login:hover { filter:brightness(1.06); }
+    .err { background:#fef2f2; border:1px solid #fecaca; color:#b91c1c; padding:10px 12px;
+        border-radius:10px; font-size:.85rem; margin-bottom:16px; }
+    .val { color:#dc2626; font-size:.78rem; }
+</style>
+
+<div class="login-wrap">
+    <div class="login-card">
+        <div class="logo-wrap">
+            <img src="/img/ccpbg-logo.png" onerror="this.onerror=null;this.src='/img/CCPBG.jpg'" alt="CCPBG">
+        </div>
+        <h1>เข้าสู่ระบบ</h1>
+
+        @if (!string.IsNullOrEmpty(Model.Error))
+        {
+            <div class="err">@Model.Error</div>
+        }
+
+        <form method="post" asp-controller="Account" asp-action="Login">
+            @Html.AntiForgeryToken()
+            <div class="field">
+                <label asp-for="Username"></label>
+                <input asp-for="Username" autocomplete="username" autofocus />
+                <span class="val" asp-validation-for="Username"></span>
+            </div>
+            <div class="field">
+                <label asp-for="Password"></label>
+                <div class="pwd-wrap">
+                    <input asp-for="Password" type="password" autocomplete="current-password"/>
+                    <button type="button" class="pwd-eye" id="pwdToggle" title="แสดง/ซ่อนรหัสผ่าน">
+                        <svg id="eyeOpen" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                        <svg id="eyeOff" style="display:none" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                    </button>
+                </div>
+                <span class="val" asp-validation-for="Password"></span>
+            </div>
+            <div class="remember-row">
+                <label class="remember-lbl">
+                    <input asp-for="RememberMe" />
+                    <span>จดจำการเข้าสู่ระบบ</span>
+                </label>
+            </div>
+            <button class="btn-login" type="submit">เข้าสู่ระบบ</button>
+            <div style="text-align:center;margin-top:16px;">
+                <a asp-controller="Account" asp-action="ForgotPassword"
+                   style="font-size:.86rem;color:var(--accent);font-weight:600;">ลืมรหัสผ่าน?</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        (function () {
+            var pwd = document.getElementById('Password'),
+                btn = document.getElementById('pwdToggle'),
+                o = document.getElementById('eyeOpen'),
+                f = document.getElementById('eyeOff');
+            if (btn && pwd) btn.addEventListener('click', function () {
+                var hidden = pwd.type === 'password';
+                pwd.type = hidden ? 'text' : 'password';
+                o.style.display = hidden ? 'none' : '';
+                f.style.display = hidden ? '' : 'none';
+                pwd.focus();
+            });
+        })();
+    </script>
+}

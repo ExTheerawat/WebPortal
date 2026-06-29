@@ -1,0 +1,70 @@
+@inject SingleSignOn.Services.UserAccessor Access
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]CCP Business Group Portal</title>
+    <link rel="icon" href="/img/ccpbg-logo.png" type="image/png">
+    <link rel="icon" href="/img/LogoTitle.png" type="image/x-icon">
+    <style>
+        :root { --bg:#f3f0e8; --card:#ffffff; --muted:#6b7280; --text:#1f2937; --accent:#8a6a10; --accent2:#caa12f;
+            --border:#e7e1d3; --ink:#15110b; --gold:#caa12f; --gold-lt:#e8cd72; --on-dark:#e9e2d0; }
+        * { box-sizing: border-box; }
+        body { margin:0; font-family:"Segoe UI",Tahoma,sans-serif; background:var(--bg); color:var(--text); min-height:100vh; }
+        a { color:var(--accent); text-decoration:none; }
+        header.top { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 28px;
+            background:#fff; border-bottom:2px solid var(--gold); box-shadow:0 2px 10px #00000012; position:sticky; top:0; z-index:10; }
+        header.top .brand { display:flex; align-items:center; gap:14px; }
+        header.top .brand img.logo { height:42px; width:auto; display:block; }
+        header.top .brand .sys { font-weight:600; font-size:1rem; color:var(--text); border-left:2px solid var(--border); padding-left:14px; }
+        header.top .brand .sys b { color:var(--accent); }
+        header.top .user { font-size:.9rem; color:var(--muted); display:flex; gap:14px; align-items:center; }
+        header.top .user .logout { color:var(--accent); border:1px solid var(--gold); padding:6px 14px; border-radius:8px; font-weight:600; }
+        header.top .user .logout:hover { background:var(--gold); color:var(--ink); border-color:var(--gold); }
+        header.top .user .adminlink { color:var(--text); border:1px solid var(--border); padding:6px 14px; border-radius:8px; font-weight:600; }
+        header.top .user .adminlink:hover { border-color:var(--gold); color:var(--accent); }
+        main { max-width:1040px; margin:0 auto; padding:36px 20px 60px; }
+        footer { text-align:center; color:var(--muted); font-size:.8rem; padding:24px; }
+
+        @@media (max-width:680px) {
+            header.top { padding:10px 14px; gap:8px; }
+            header.top .brand { gap:10px; min-width:0; }
+            header.top .brand img.logo { height:30px; }
+            header.top .brand .sys { display:none; }                 /* โลโก้มีชื่อแบรนด์อยู่แล้ว */
+            header.top .user { gap:8px; font-size:.85rem; }
+            header.top .user > span { display:none; }                /* ซ่อนอีเมลบนมือถือ */
+            header.top .user .adminlink .lbl { display:none; }       /* เหลือไอคอน 🔐 */
+            header.top .user .adminlink { padding:7px 11px; }
+            header.top .user .logout { padding:7px 12px; }
+            main { padding:18px 14px 44px; }
+            footer { padding:18px 14px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="top">
+        <div class="brand">
+            <img class="logo" src="/img/ccpbg-logo.png" onerror="this.onerror=null;this.src='/img/CCPBG.jpg'" alt="CCPBG">
+            <span class="sys"><b>CCP Business Group</b></span>
+        </div>
+        @if (User.Identity?.IsAuthenticated == true)
+        {
+            var isAdmin = (await Access.GetAsync()).IsAdmin;
+            <div class="user">
+                @if (isAdmin)
+                {
+                    <a class="adminlink" href="/Permissions" title="จัดการสิทธิ์">🔐 <span class="lbl">จัดการสิทธิ์</span></a>
+                }
+                <span>👤 @User.Identity!.Name</span>
+                <a class="logout" href="/Account/Logout">ออกจากระบบ</a>
+            </div>
+        }
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>© @DateTime.Now.Year CCP Business Group · Web Portal</footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

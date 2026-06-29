@@ -1,0 +1,13 @@
+@{ ViewData["Title"] = "ลิงก์ใช้ไม่ได้"; }
+@await Html.PartialAsync("_AuthStyles")
+
+<div class="auth-wrap">
+    <div class="auth-card">
+        <div class="big-ico bad">⚠️</div>
+        <h1>ลิงก์ใช้ไม่ได้</h1>
+        <p class="sub">ลิงก์ตั้งรหัสผ่านนี้ไม่ถูกต้อง หรือถูกใช้ไปแล้ว<br>กรุณาขอลิงก์ใหม่อีกครั้ง</p>
+        <a class="btn-login" style="display:block;text-align:center;text-decoration:none;"
+           asp-controller="Account" asp-action="ForgotPassword">ขอลิงก์ใหม่</a>
+        <div class="auth-foot"><a asp-controller="Account" asp-action="Login">← กลับไปหน้าเข้าสู่ระบบ</a></div>
+    </div>
+</div>

@@ -1,0 +1,223 @@
+@model SingleSignOn.Models.PermissionsPageViewModel
+@{
+    ViewData["Title"] = "จัดการสิทธิ์";
+}
+<style>
+    .pm-top { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:22px; flex-wrap:wrap; }
+    .pm-top h1 { margin:0; font-size:1.5rem; display:flex; align-items:center; gap:8px; color:var(--text); }
+
+    .btn { height:40px; padding:0 18px; display:inline-flex; align-items:center; justify-content:center; gap:7px;
+           border-radius:10px; font-weight:600; font-size:.9rem; border:1px solid var(--border); background:#fff;
+           color:var(--text); cursor:pointer; text-decoration:none; line-height:1; white-space:nowrap; transition:all .12s; }
+    .btn:hover { border-color:var(--accent); color:var(--accent); }
+    .btn.primary { background:linear-gradient(135deg,#f3dd86,#caa12f 55%,#a9781a); color:#1a1205; border-color:#b8901f; font-weight:800; }
+    .btn.primary:hover { filter:brightness(1.06); color:#1a1205; }
+    .btn.danger { color:#b91c1c; border-color:#fecaca; background:#fff; }
+    .btn.danger:hover { background:#fef2f2; color:#b91c1c; }
+    .btn.sm { height:34px; padding:0 14px; font-size:.83rem; border-radius:8px; }
+
+    .card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:22px 24px;
+            box-shadow:0 1px 3px #0f172a0d; margin-bottom:24px; }
+    .card h2 { margin:0 0 18px; font-size:1.1rem; }
+    .field { margin-bottom:18px; }
+    .field > label { display:block; font-size:.8rem; font-weight:600; color:var(--muted); margin-bottom:8px; }
+    .apps-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; }
+    .app-chk { display:flex; align-items:center; gap:9px; border:1px solid var(--border); border-radius:10px;
+               padding:11px 13px; cursor:pointer; transition:all .12s; }
+    .app-chk:hover { border-color:var(--accent); }
+    .app-chk input, .toggles input { width:17px; height:17px; accent-color:var(--accent); cursor:pointer; }
+    .toggles { display:flex; gap:28px; flex-wrap:wrap; }
+    .toggles label { display:flex; align-items:center; gap:9px; cursor:pointer; font-size:.92rem; }
+    .form-actions { display:flex; gap:12px; align-items:center; margin-top:4px; flex-wrap:wrap; }
+
+    table.pm { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+    table.pm th, table.pm td { text-align:left; padding:13px 16px; border-bottom:1px solid var(--border); font-size:.92rem; vertical-align:middle; }
+    table.pm th { background:#f8fafc; color:var(--muted); font-weight:600; font-size:.78rem; text-transform:uppercase; letter-spacing:.4px; }
+    table.pm tr:last-child td { border-bottom:0; }
+    .badge { display:inline-block; padding:3px 9px; border-radius:20px; font-size:.74rem; margin:2px 3px 2px 0; background:#eef2f6; border:1px solid var(--border); }
+    .pill { display:inline-block; padding:3px 11px; border-radius:20px; font-size:.74rem; font-weight:600; }
+    .pill.on { background:#dcfce7; color:#15803d; } .pill.off { background:#fee2e2; color:#b91c1c; }
+    .pill.adm { background:#fef3c7; color:#92400e; } .pill.usr { background:#eef2f6; color:#475569; }
+    .row-actions { display:flex; gap:8px; align-items:center; }
+    .row-actions form { margin:0; }
+
+    .select2-container .select2-selection--single { height:40px; border:1px solid var(--border); border-radius:10px; }
+    .select2-container--default .select2-selection--single .select2-selection__rendered { line-height:38px; }
+    .select2-container--default .select2-selection--single .select2-selection__arrow { height:38px; }
+    .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:14px; }
+    .tbl-toolbar { margin-bottom:14px; }
+    .tbl-toolbar input { width:100%; max-width:420px; height:42px; padding:0 16px; border:1px solid var(--border);
+        border-radius:10px; font-size:.95rem; background:#fff; color:var(--text); }
+    .tbl-toolbar input:focus { outline:none; border-color:var(--gold); box-shadow:0 0 0 3px #caa12f33; }
+    .tbl-foot { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:16px; flex-wrap:wrap; }
+    .tbl-foot #tblInfo { color:var(--muted); font-size:.85rem; }
+    #tblPager { display:flex; gap:6px; flex-wrap:wrap; }
+    .pg { min-width:38px; height:38px; padding:0 11px; border:1px solid var(--border); background:#fff; border-radius:9px;
+        cursor:pointer; font-size:.85rem; font-weight:600; color:var(--text); display:inline-flex; align-items:center; justify-content:center; }
+    .pg:hover:not(:disabled) { border-color:var(--accent); color:var(--accent); }
+    .pg.active { background:#caa12f; color:#1a1205; border-color:#b8901f; }
+    .pg:disabled { opacity:.4; cursor:default; }
+    .pg-ell { padding:0 4px; color:var(--muted); align-self:center; }
+
+    @@media (max-width:680px) {
+        .pm-top { margin-bottom:16px; }
+        .pm-top h1 { font-size:1.2rem; }
+        .card { padding:18px 16px; }
+        .apps-grid { grid-template-columns:1fr 1fr; gap:8px; }
+        .app-chk { padding:10px 11px; font-size:.9rem; }
+        .toggles { gap:14px; }
+        table.pm th, table.pm td { padding:11px 12px; font-size:.85rem; white-space:nowrap; }
+        .badge { font-size:.7rem; }
+    }
+    @@media (max-width:420px) {
+        .apps-grid { grid-template-columns:1fr; }
+    }
+</style>
+
+<div class="pm-top">
+    <h1>🔐 จัดการสิทธิ์การใช้งาน</h1>
+    <a class="btn" href="/">← กลับหน้าหลัก</a>
+</div>
+
+<div class="card">
+    <h2>➕ เพิ่มสิทธิ์ผู้ใช้</h2>
+    <form method="post" asp-action="Save">
+        @Html.AntiForgeryToken()
+        <div class="field">
+            <label>อีเมลผู้ใช้ (เลือก/ค้นหา — แสดงเฉพาะคนที่ยังไม่ได้กำหนดสิทธิ์)</label>
+            <select name="userKey" id="userSelect" required>
+                <option value=""></option>
+                @foreach (var u in Model.UnassignedUsers)
+                {
+                    <option value="@u.UserId">@u.Email</option>
+                }
+            </select>
+        </div>
+        <div class="field">
+            <label>ระบบที่ให้เห็น (ค่าเริ่มต้น: Leave, KPI, Internal — ปรับเพิ่ม/ลดได้)</label>
+            <div class="apps-grid">
+                @foreach (var app in Model.AllApps)
+                {
+                    var on = Model.DefaultApps.Any(d => string.Equals(d, app.Key, StringComparison.OrdinalIgnoreCase));
+                    <label class="app-chk">
+                        <input type="checkbox" name="apps" value="@app.Key" @(on ? "checked" : "") />
+                        <span>@app.Icon @app.Name</span>
+                    </label>
+                }
+            </div>
+        </div>
+        <div class="field">
+            <div class="toggles">
+                <label><input type="checkbox" name="isAdmin" value="true" /> เป็นผู้ดูแล (เห็นเมนูจัดการสิทธิ์)</label>
+                <label><input type="checkbox" name="isActive" value="true" checked /> เปิดใช้งาน</label>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button class="btn primary" type="submit">💾 บันทึก</button>
+            <span style="color:var(--muted);font-size:.82rem;">เหลือ @Model.UnassignedUsers.Count คนที่ยังไม่ได้กำหนดสิทธิ์</span>
+        </div>
+    </form>
+</div>
+
+@if (Model.Users.Count == 0)
+{
+    <div class="card" style="text-align:center;color:var(--muted);">ยังไม่มีผู้ใช้ถูกกำหนดสิทธิ์</div>
+}
+else
+{
+<div class="tbl-toolbar">
+    <input type="text" id="tblSearch" autocomplete="off" placeholder=" ค้นหาข้อมูล (อีเมล / ระบบ / สิทธิ์ / สถานะ)…" />
+</div>
+<div class="table-wrap">
+<table id="userTable" class="pm">
+    <thead>
+        <tr><th>อีเมล</th><th>ระบบที่เห็น</th><th>สิทธิ์</th><th>สถานะ</th><th style="width:160px;">จัดการ</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model.Users)
+        {
+            <tr>
+                <td>@u.Email</td>
+                <td>
+                    @if (u.Apps.Count == 0) { <span style="color:var(--muted);">—</span> }
+                    @foreach (var k in u.Apps) { <span class="badge">@k</span> }
+                </td>
+                <td>@if (u.IsAdmin) { <span class="pill adm">ผู้ดูแล</span> } else { <span class="pill usr">ทั่วไป</span> }</td>
+                <td>@if (u.IsActive) { <span class="pill on">เปิด</span> } else { <span class="pill off">ปิด</span> }</td>
+                <td>
+                    <div class="row-actions">
+                        <a class="btn sm" asp-action="UserEdit" asp-route-id="@u.UserKey">แก้ไข</a>
+                        <form asp-action="Delete" method="post" onsubmit="return confirm('ลบสิทธิ์ผู้ใช้นี้?');">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="userKey" value="@u.UserKey" />
+                            <button class="btn sm danger" type="submit">ลบ</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
+<div class="tbl-foot">
+    <span id="tblInfo"></span>
+    <div id="tblPager"></div>
+</div>
+}
+
+@section Scripts {
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(function () {
+            $('#userSelect').select2({ placeholder: 'พิมพ์ค้นหาอีเมล…', allowClear: true, width: '100%' });
+
+            // ----- instant search (all fields) + pagination -----
+            var search = document.getElementById('tblSearch');
+            var table = document.getElementById('userTable');
+            if (search && table) {
+                var rows = Array.prototype.slice.call(table.querySelectorAll('tbody tr'));
+                var info = document.getElementById('tblInfo');
+                var pager = document.getElementById('tblPager');
+                var pageSize = 10, page = 1, filtered = rows;
+
+                function makeBtn(label, target, disabled, active) {
+                    var b = document.createElement('button');
+                    b.type = 'button'; b.className = 'pg' + (active ? ' active' : '');
+                    b.textContent = label; b.disabled = !!disabled;
+                    if (!disabled && !active) b.addEventListener('click', function () { page = target; render(); });
+                    pager.appendChild(b);
+                }
+                function render() {
+                    var total = filtered.length, pages = Math.max(1, Math.ceil(total / pageSize));
+                    if (page > pages) page = pages; if (page < 1) page = 1;
+                    rows.forEach(function (r) { r.style.display = 'none'; });
+                    var start = (page - 1) * pageSize;
+                    filtered.slice(start, start + pageSize).forEach(function (r) { r.style.display = ''; });
+                    info.textContent = total
+                        ? ('แสดง ' + (start + 1) + '–' + Math.min(start + pageSize, total) + ' จาก ' + total + ' คน')
+                        : 'ไม่พบข้อมูลที่ค้นหา';
+                    pager.innerHTML = '';
+                    if (pages <= 1) return;
+                    makeBtn('‹', page - 1, page <= 1, false);
+                    var win = 2;
+                    for (var i = 1; i <= pages; i++) {
+                        if (i === 1 || i === pages || (i >= page - win && i <= page + win)) {
+                            makeBtn(String(i), i, false, i === page);
+                        } else if (i === page - win - 1 || i === page + win + 1) {
+                            var s = document.createElement('span'); s.className = 'pg-ell'; s.textContent = '…'; pager.appendChild(s);
+                        }
+                    }
+                    makeBtn('›', page + 1, page >= pages, false);
+                }
+                search.addEventListener('input', function () {
+                    var q = this.value.trim().toLowerCase();
+                    filtered = q ? rows.filter(function (r) { return r.textContent.toLowerCase().indexOf(q) >= 0; }) : rows;
+                    page = 1; render();
+                });
+                render();
+            }
+        });
+    </script>
+}

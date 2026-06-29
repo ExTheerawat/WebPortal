@@ -1,0 +1,43 @@
+@model List<string>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>กำลังออกจากระบบ…</title>
+    <link rel="icon" href="/img/ccpbg-logo.png" type="image/png">
+    <link rel="icon" href="/img/CCPBG.jpg" type="image/svg+xml">
+    <style>
+        body { margin:0; height:100vh; display:flex; align-items:center; justify-content:center;
+            font-family:"Segoe UI",Tahoma,sans-serif; background:#eef2f6; color:#1f2937; }
+        .box { text-align:center; }
+        .box img { height:54px; width:auto; margin-bottom:22px; }
+        .spinner { width:42px; height:42px; border:4px solid #e5e7eb; border-top-color:#e11b22;
+            border-radius:50%; margin:0 auto 16px; animation:spin .8s linear infinite; }
+        @@keyframes spin { to { transform: rotate(360deg); } }
+        p { color:#6b7280; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="/img/ccpbg-logo.png" onerror="this.onerror=null;this.src='/img/CCPBG.jpg'" alt="CCPBG">
+        <div class="spinner"></div>
+        <p>กำลังออกจากระบบทุกระบบ…</p>
+    </div>
+    <script>
+        var urls = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model));
+        var dest = @Html.Raw(System.Text.Json.JsonSerializer.Serialize((string)(ViewBag.ReturnUrl ?? "/Account/Login")));
+        var go = function () { location.replace(dest); };
+        try {
+            Promise.allSettled(urls.map(function (u) {
+                return fetch(u, { mode: 'no-cors', credentials: 'include', cache: 'no-store' });
+            })).finally(go);
+        } catch (e) { go(); }
+        // hard fallback if any logout endpoint is slow/unreachable
+        setTimeout(go, 2500);
+    </script>
+</body>
+</html>

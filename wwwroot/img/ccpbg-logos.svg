@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 165" role="img" aria-label="CCPBG - CCP Business Group">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EBC85B"/>
+      <stop offset="0.55" stop-color="#D4A82C"/>
+      <stop offset="1" stop-color="#A9781A"/>
+    </linearGradient>
+  </defs>
+  <g transform="skewX(-9)" font-family="'Arial Black','Arial',sans-serif" font-weight="900" font-style="italic">
+    <text x="44" y="104" font-size="104" letter-spacing="-6">
+      <tspan fill="#E11B22">CC</tspan><tspan fill="#1A1A1A">PB</tspan><tspan fill="url(#gold)">G</tspan>
+    </text>
+  </g>
+  <rect x="52" y="118" width="398" height="6" rx="3" fill="#E11B22" transform="skewX(-9)"/>
+  <text x="46" y="153" font-family="'Arial',sans-serif" font-weight="800" font-style="italic" font-size="27" letter-spacing="4" fill="#1A1A1A">CCP BUSINESS GROUP</text>
+</svg>
