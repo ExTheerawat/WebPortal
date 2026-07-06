@@ -146,3 +146,4 @@ D:\AI\SingleSignOn\obj\Release\net9.0\SingleSi.232CB496.Up2Date
 D:\AI\SingleSignOn\bin\Release\net9.0\BouncyCastle.Cryptography.dll
 D:\AI\SingleSignOn\bin\Release\net9.0\MailKit.dll
 D:\AI\SingleSignOn\bin\Release\net9.0\MimeKit.dll
+D:\AI\SingleSignOn\obj\Release\net9.0\SingleSignOn.sourcelink.json

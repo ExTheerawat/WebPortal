@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SingleSignOn")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85a5f98d8e7ab97c6ead5b45a8497d36f2db6f2c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SingleSignOn")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SingleSignOn")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

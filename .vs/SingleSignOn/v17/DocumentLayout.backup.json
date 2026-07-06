@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\AI\\SingleSignOn\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\controllers\\ssocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:controllers\\ssocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CA9E245-BCFA-75A9-9414-4EEFD8D5BC78}|SingleSignOn.csproj|d:\\ai\\singlesignon\\services\\permissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
@@ -86,16 +86,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\AI\\SingleSignOn\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "D:\\AI\\SingleSignOn\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwD0AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAowD0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T06:44:28.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-22T06:44:28.366Z"
             },
             {
               "$type": "Document",
@@ -111,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AppLoginService.cs",
               "DocumentMoniker": "D:\\AI\\SingleSignOn\\Services\\AppLoginService.cs",
               "RelativeDocumentMoniker": "Services\\AppLoginService.cs",
@@ -119,8 +118,7 @@
               "RelativeToolTip": "Services\\AppLoginService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAArwB8AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T11:04:39.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-22T11:04:39.679Z"
             },
             {
               "$type": "Document",
@@ -132,8 +130,7 @@
               "RelativeToolTip": "Services\\PermissionRepository.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAUwBIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-24T07:13:19.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-24T07:13:19.973Z"
             },
             {
               "$type": "Document",
@@ -145,8 +142,7 @@
               "RelativeToolTip": "Views\\Permissions\\Index.cshtml",
               "ViewState": "AgIAAK4AAAAAAAAAAAAkwMoAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-24T03:09:37.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-24T03:09:37.47Z"
             },
             {
               "$type": "Document",
@@ -162,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SsoController.cs",
               "DocumentMoniker": "D:\\AI\\SingleSignOn\\Controllers\\SsoController.cs",
               "RelativeDocumentMoniker": "Controllers\\SsoController.cs",
@@ -170,18 +166,17 @@
               "RelativeToolTip": "Controllers\\SsoController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T06:44:24.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-22T06:44:24.422Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\AI\\SingleSignOn\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "D:\\AI\\SingleSignOn\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAABkAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-06-22T10:58:27.204Z",
               "EditorCaption": ""
