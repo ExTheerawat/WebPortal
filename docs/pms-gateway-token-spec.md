@@ -202,8 +202,10 @@ export const config = {
 key ดิบ 32 ไบต์ (256-bit) encode เป็น **base64 มาตรฐาน** — ใช้คำสั่งไหนก็ได้:
 
 ```powershell
-# PowerShell
-[Convert]::ToBase64String([System.Security.Cryptography.RandomNumberGenerator]::GetBytes(32))
+# PowerShell (ใช้ได้ทั้ง 5.1 และ 7 — แบบ [RandomNumberGenerator]::GetBytes(32) ตรง ๆ ใช้ได้เฉพาะ pwsh 7+)
+$b = New-Object byte[] 32
+[System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($b)
+[Convert]::ToBase64String($b)
 ```
 ```bash
 # Node
