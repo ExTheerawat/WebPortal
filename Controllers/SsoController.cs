@@ -51,10 +51,16 @@ public class SsoController : Controller
         {
             if (app.Strategy == SsoStrategy.GatewayRedirect)
             {
-                // The app signs the user in by e-mail via its own gateway endpoint and
-                // sets its own session cookie. Nothing to plant on our side.
-                //var url = app.GatewayUrl.Replace("{email}", Uri.EscapeDataString(user));
-                var url = app.GatewayUrl.Replace("{email}", Uri.EscapeDataString(user.Trim().ToLowerInvariant()));
+                // The app signs the user in via its own gateway endpoint and sets its own
+                // session cookie. Nothing to plant on our side. {token} gateways get a
+                // signed short-lived JWT so the endpoint can reject forged/replayed links;
+                // {email} is the legacy unsigned form (Internal).
+                var email = user.Trim().ToLowerInvariant();
+                var url = app.GatewayUrl;
+                if (url.Contains("{token}", StringComparison.Ordinal))
+                    url = url.Replace("{token}", Uri.EscapeDataString(GatewayTokenService.Create(
+                        app, email, access.UserKey > 0 ? access.UserKey : (int?)null)));
+                url = url.Replace("{email}", Uri.EscapeDataString(email));
                 return Redirect(url);
             }
 

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AI\\SingleSignOn\\SingleSignOn.csproj": {}
+    "D:\\Work\\WebPortalX\\.claude\\worktrees\\pensive-cori-d47c28\\SingleSignOn.csproj": {}
   },
   "projects": {
-    "D:\\AI\\SingleSignOn\\SingleSignOn.csproj": {
+    "D:\\Work\\WebPortalX\\.claude\\worktrees\\pensive-cori-d47c28\\SingleSignOn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AI\\SingleSignOn\\SingleSignOn.csproj",
+        "projectUniqueName": "D:\\Work\\WebPortalX\\.claude\\worktrees\\pensive-cori-d47c28\\SingleSignOn.csproj",
         "projectName": "SingleSignOn",
-        "projectPath": "D:\\AI\\SingleSignOn\\SingleSignOn.csproj",
-        "packagesPath": "C:\\Users\\theer\\.nuget\\packages\\",
-        "outputPath": "D:\\AI\\SingleSignOn\\obj\\",
+        "projectPath": "D:\\Work\\WebPortalX\\.claude\\worktrees\\pensive-cori-d47c28\\SingleSignOn.csproj",
+        "packagesPath": "C:\\Users\\ArnonAryuwong\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\WebPortalX\\.claude\\worktrees\\pensive-cori-d47c28\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\theer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ArnonAryuwong\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

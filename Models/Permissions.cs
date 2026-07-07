@@ -15,6 +15,7 @@ public class UserAccess
 {
     public bool HasRole { get; set; }   // has an (active) permission record
     public bool IsAdmin { get; set; }
+    public int UserKey { get; set; }    // one_leave.dbo.log_users.user_id (0 = unresolved)
     public HashSet<string> AppKeys { get; set; } = new(StringComparer.OrdinalIgnoreCase);
 
     public bool CanSee(string appKey) => AppKeys.Contains(appKey);

@@ -9,6 +9,7 @@
 | Leave | https://leave.penso.co.th | Transplant (`.AspNet.ApplicationCookie`) |
 | KPI | https://kpi.penso.co.th | Transplant (`.AspNetCore.Cookies`) |
 | Helpdesk | https://support.penso.co.th | Transplant (`.AspNetCore.Cookies`) |
+| PMS | https://pms.penso.co.th | **GatewayRedirect + signed JWT** (`{token}` — ดู [docs/pms-gateway-token-spec.md](docs/pms-gateway-token-spec.md)) |
 
 > **ค่าเริ่มต้น = Transplant ทั้ง 4 ระบบ** (รหัสผ่านไม่ออกไปที่เบราว์เซอร์เลย) — พิสูจน์แล้วว่าเข้าได้ทุกระบบโดยไม่ล็อกอินซ้ำ
 > ข้อจำกัดเดียว: KPI กับ Helpdesk ใช้ชื่อคุกกี้เดียวกัน (`.AspNetCore.Cookies`) จึง **เปิดพร้อมกันคนละแท็บไม่ได้** (สลับผ่านพอร์ทัลได้ปกติ)
@@ -91,8 +92,10 @@ SSO ต้องการให้พอร์ทัลรันใต้โด�
 
 ## Deploy (production — จำเป็นต่อการใช้งานจริง)
 
-1. โฮสต์พอร์ทัลที่ **https://sso.penso.co.th** (เพิ่ม DNS A record + ใบรับรอง HTTPS)
-   - IIS: ติดตั้ง ASP.NET Core Hosting Bundle → publish → ผูก binding `sso.penso.co.th:443`
+1. โฮสต์พอร์ทัลที่ **https://portal.penso.co.th** (host จริงใน production — DNS A record + ใบรับรอง HTTPS)
+   - IIS: ติดตั้ง ASP.NET Core Hosting Bundle → publish → ผูก binding `portal.penso.co.th:443`
+   - หมายเหตุ: หัวข้อทดสอบ local ด้านบนใช้ชื่อ `sso.penso.co.th` **โดยตั้งใจ** —
+     เป็น alias ใน hosts ที่ไม่ทับ host จริง เพื่อให้เครื่อง dev ยังเข้า portal จริงได้
    - `dotnet publish -c Release` แล้ว deploy โฟลเดอร์ผลลัพธ์
 2. `appsettings.json`:
    - `Sso:CookieDomain` = `.penso.co.th`
@@ -128,5 +131,5 @@ SSO ต้องการให้พอร์ทัลรันใต้โด�
 - `/go/leave`, `/go/internal` → ล็อกอินจริงสำเร็จ + แปะคุกกี้โดเมนถูกต้อง
 - `/go/kpi`, `/go/helpdesk` → ได้ token/คุกกี้ antiforgery + สร้างฟอร์ม auto-submit ถูกต้อง
 
-⏳ ต้องทดสอบหลัง deploy ใต้ `sso.penso.co.th`:
+⏳ ต้องทดสอบหลัง deploy ใต้ `portal.penso.co.th`:
 - เบราว์เซอร์รับคุกกี้ `.penso.co.th` แล้วเข้าแต่ละแอปโดยไม่ล็อกอินซ้ำ (พฤติกรรมคุกกี้มาตรฐาน)

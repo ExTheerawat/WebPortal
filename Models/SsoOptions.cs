@@ -53,8 +53,12 @@ public class AppDefinition
     public string LoginPostUrl { get; set; } = "";
     public string HomeUrl { get; set; } = "";
 
-    /// <summary>For GatewayRedirect: URL template signing in by e-mail. Use {email} placeholder.</summary>
+    /// <summary>For GatewayRedirect: URL template signing in by e-mail. Use {email} placeholder,
+    /// or {token} for a signed short-lived JWT (requires <see cref="GatewaySecret"/>).</summary>
     public string GatewayUrl { get; set; } = "";
+
+    /// <summary>HMAC key shared with a {token} gateway app: standard base64 of 32 random bytes.</summary>
+    public string GatewaySecret { get; set; } = "";
 
     /// <summary>Optional GET logout URL of the app — hit on portal logout to clear that app's own session.</summary>
     public string LogoutUrl { get; set; } = "";

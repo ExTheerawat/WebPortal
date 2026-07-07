@@ -46,6 +46,7 @@ public class PermissionRepository : IPermissionRepository
 
             access.HasRole = true;
             access.IsAdmin = rec.IsAdmin;
+            access.UserKey = rec.UserKey;
             var keys = await db.QueryAsync<string>(
                 "SELECT AppKey FROM dbo.UserApps WHERE UserKey = @k", new { k = rec.UserKey });
             foreach (var k in keys) access.AppKeys.Add(k);
