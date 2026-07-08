@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0u/rW9VBRPs=",
+  "dgSpecHash": "VQ20i9i4ZV8=",
   "success": true,
-  "projectFilePath": "D:\\Work\\WebPortalX\\.claude\\worktrees\\pensive-cori-d47c28\\SingleSignOn.csproj",
+  "projectFilePath": "D:\\Work\\WebPortalX\\SingleSignOn.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ArnonAryuwong\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "C:\\Users\\ArnonAryuwong\\.nuget\\packages\\dapper\\2.1.79\\dapper.2.1.79.nupkg.sha512",
