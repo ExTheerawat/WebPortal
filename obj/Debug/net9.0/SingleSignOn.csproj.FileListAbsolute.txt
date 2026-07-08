@@ -294,3 +294,4 @@ D:\Work\WebPortalX\.claude\worktrees\pensive-cori-d47c28\obj\Debug\net9.0\refint
 D:\Work\WebPortalX\.claude\worktrees\pensive-cori-d47c28\obj\Debug\net9.0\SingleSignOn.pdb
 D:\Work\WebPortalX\.claude\worktrees\pensive-cori-d47c28\obj\Debug\net9.0\SingleSignOn.genruntimeconfig.cache
 D:\Work\WebPortalX\.claude\worktrees\pensive-cori-d47c28\obj\Debug\net9.0\ref\SingleSignOn.dll
+D:\AI\SingleSignOn\obj\Debug\net9.0\SingleSignOn.sourcelink.json
