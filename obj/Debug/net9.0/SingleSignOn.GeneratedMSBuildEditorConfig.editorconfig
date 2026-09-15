@@ -9,85 +9,85 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SingleSignOn
 build_property.RootNamespace = SingleSignOn
-build_property.ProjectDir = D:\AI\SingleSignOn\
+build_property.ProjectDir = D:\Work\WebPortalX\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\AI\SingleSignOn
+build_property.MSBuildProjectDirectory = D:\Work\WebPortalX
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/AI/SingleSignOn/Views/Account/ForgotPassword.cshtml]
+[D:/Work/WebPortalX/Views/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Account/ForgotPasswordSent.cshtml]
+[D:/Work/WebPortalX/Views/Account/ForgotPasswordSent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZFNlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Account/Login.cshtml]
+[D:/Work/WebPortalX/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Account/Logout.cshtml]
+[D:/Work/WebPortalX/Views/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Account/ResetInvalid.cshtml]
+[D:/Work/WebPortalX/Views/Account/ResetInvalid.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldEludmFsaWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Account/ResetPassword.cshtml]
+[D:/Work/WebPortalX/Views/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Account/ResetSuccess.cshtml]
+[D:/Work/WebPortalX/Views/Account/ResetSuccess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFN1Y2Nlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Account/_AuthStyles.cshtml]
+[D:/Work/WebPortalX/Views/Account/_AuthStyles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxfQXV0aFN0eWxlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Home/Index.cshtml]
+[D:/Work/WebPortalX/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Permissions/Index.cshtml]
+[D:/Work/WebPortalX/Views/Permissions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVybWlzc2lvbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Permissions/UserEdit.cshtml]
+[D:/Work/WebPortalX/Views/Permissions/UserEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVybWlzc2lvbnNcVXNlckVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Shared/Error.cshtml]
+[D:/Work/WebPortalX/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Work/WebPortalX/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Sso/AutoSubmit.cshtml]
+[D:/Work/WebPortalX/Views/Sso/AutoSubmit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3NvXEF1dG9TdWJtaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Sso/SsoError.cshtml]
+[D:/Work/WebPortalX/Views/Sso/SsoError.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3NvXFNzb0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/_ViewImports.cshtml]
+[D:/Work/WebPortalX/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/_ViewStart.cshtml]
+[D:/Work/WebPortalX/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/AI/SingleSignOn/Views/Shared/_Layout.cshtml]
+[D:/Work/WebPortalX/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rn0ci2upqi
